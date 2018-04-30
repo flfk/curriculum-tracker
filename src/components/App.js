@@ -17,8 +17,6 @@ class App extends Component {
 
     return (
       <div className="App">
-        <p>hello world</p>
-        { this.state.subjectIDs[0] }
         <div>{ subjects }</div>
       </div>
     );
