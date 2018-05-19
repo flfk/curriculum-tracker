@@ -13,7 +13,7 @@ class App extends Component {
 
   render() {
     const subjects = this.state.subjectIDs
-      .map(elem => <Subject key= {elem} subjectID={elem} />);
+      .map(elem => <Subject key={elem} subjectID={elem} />);
 
     return (
       <div className="App">
