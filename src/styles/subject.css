@@ -47,5 +47,16 @@
 
 .subjectTag {
   display: inline-block;
+  margin: 0px 5px 0px 0px;
+}
+/*
+.subjectTagValue {
+  display: inline-block;
+  margin: 0px 5px 0px 0px;
 }
 
+.subjectTagIcon {
+  display: inline-block;
+  margin: 0px 5px 0px 0px;
+}
+*/
