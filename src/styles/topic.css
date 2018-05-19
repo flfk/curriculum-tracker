@@ -1,0 +1,49 @@
+.topic {
+  border: 1px solid #979797;
+  border-radius: 12px;
+  box-shadow: 0px 1px 5px #D0D0D0;
+  width: 320px;
+  position: relative;
+  margin: 20px 20px 20px 0px;
+}
+
+.topicHeader {
+  border-bottom: 1px solid #979797;
+  height: 60px;
+}
+
+.topicName {
+  height: 20px;
+  width: 190px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #00000080;
+  /* Limit subject name within container*/
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: absolute;
+  top: 20px;
+  left: 15px;
+}
+
+.topicEditBtn {
+  height: 20px;
+  width: 40px;
+  font-size: 14px;
+  color: #00000054;
+  /*remove inherited border from topic*/
+  border: initial;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+}
+
+.topicDivider {
+  height: 20px;
+  width: 1px;
+  background-color: #CCCCCC;
+  position: absolute;
+  top: 20px;
+  right: 60px;
+}

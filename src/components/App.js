@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Topic key="0" subjectIDs={ this.state.subjectIDs } />
+        <Topic key="0" topicName="1. Introduction to CS" subjectIDs={ this.state.subjectIDs } />
       </div>
     );
   }
