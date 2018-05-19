@@ -12,7 +12,9 @@ const Subject = (props) => {
   const { subjectID } = props;
   const subject = subjectData[subjectID];
 
-  const { type, duration, author } = subject;
+  const {
+    type, duration, author, link,
+  } = subject;
 
   const typeTag = <SubjectTag key={type} tagName='type' tagValue={type} />;
   const durationTag = <SubjectTag key={duration} tagName='duration' tagValue={duration} />;
@@ -21,7 +23,7 @@ const Subject = (props) => {
   return (
     <div className="subject">
       <button className="tickBtn" />
-      <div className="subjectName">{ subject.name }</div>
+      <a className="subjectLink" href={link}>{ subject.name}</a>
       <div className="subjectTagsDiv">
         <div className="subjectTag">{ typeTag }</div>
         <div className="subjectTag">{ durationTag }</div>

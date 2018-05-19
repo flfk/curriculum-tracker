@@ -21,7 +21,7 @@
   border-radius: 5px;
 }
 
-.subjectName {
+.subjectLink {
   height: 14px;
   width: 240px;
   font-size: 12px;
@@ -33,6 +33,11 @@
   position: absolute;
   top: 0px;
   left: 40px;
+  text-decoration: none;
+}
+
+.subjectLink:hover {
+  text-decoration: underline;
 }
 
 .subjectTagsDiv {
@@ -49,14 +54,3 @@
   display: inline-block;
   margin: 0px 5px 0px 0px;
 }
-/*
-.subjectTagValue {
-  display: inline-block;
-  margin: 0px 5px 0px 0px;
-}
-
-.subjectTagIcon {
-  display: inline-block;
-  margin: 0px 5px 0px 0px;
-}
-*/
