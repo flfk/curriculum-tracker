@@ -1,0 +1,23 @@
+{
+  "subjectID" : {
+    "name": "",
+    "type": "",
+    "duration": "",
+    "author": "",
+    "isComplete": "false"
+  },
+  "0" : {
+    "name": "HarvardCS50",
+    "type": "Online Course",
+    "duration": "180",
+    "author": "Harvard",
+    "isComplete": "false"
+  },
+  "1" : {
+  "name": "Introduction to Computer Science and Programming",
+  "type": "Online Course",
+  "duration": "135",
+  "author": "MIT",
+  "isComplete": "false"
+  }
+}
