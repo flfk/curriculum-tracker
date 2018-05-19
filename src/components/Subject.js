@@ -16,9 +16,9 @@ const Subject = (props) => {
     type, duration, author, link,
   } = subject;
 
-  const typeTag = <SubjectTag key={type} tagName='type' tagValue={type} />;
-  const durationTag = <SubjectTag key={duration} tagName='duration' tagValue={duration} />;
-  const authorTag = <SubjectTag key={author} tagName='author' tagValue={author} />;
+  const typeTag = <SubjectTag key={type} tagName="type" tagValue={type} />;
+  const durationTag = <SubjectTag key={duration} tagName="duration" tagValue={duration} />;
+  const authorTag = <SubjectTag key={author} tagName="author" tagValue={author} />;
 
   return (
     <div className="subject">

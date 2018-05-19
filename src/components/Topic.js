@@ -5,8 +5,8 @@ import Subject from './Subject';
 import '../styles/topic.css';
 
 const Topic = (props) => {
-  const { subjectIDs } = props;
   const { topicName } = props;
+  const { subjectIDs } = props;
 
   const subjects = subjectIDs
     .map(elem => <Subject key={elem} subjectID={elem} />);
@@ -16,12 +16,21 @@ const Topic = (props) => {
       <div className="topicHeader">
         <div className="topicName">{ topicName }</div>
         <div className="topicProgress"></div>
-        <div className="topicDivider"></div>
+        <div className="topicDivider" />
         <button className="topicEditBtn">Edit</button>
       </div>
       <div>{ subjects }</div>
     </div>
   );
+};
+
+Topic.propTypes = {
+  topicName: PropTypes.string,
+  subjectIDs: PropTypes.array,
+};
+Topic.defaultProps = {
+  topicName: '',
+  subjectIDs: [],
 };
 
 export default Topic;

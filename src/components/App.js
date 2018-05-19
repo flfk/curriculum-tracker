@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import '../styles/App.css';
-
-import Subject from './Subject';
 import Topic from './Topic';
+
+import '../styles/App.css';
 
 class App extends Component {
   constructor() {
