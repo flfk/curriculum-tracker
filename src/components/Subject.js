@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import SubjectTag from './SubjectTag';
 
-import SubjectModel from '../model/SubjectModel.json';
 import '../styles/subject.css';
 
-import SubjectTag from './SubjectTag';
+import SubjectModel from '../model/SubjectModel.json';
 
 const subjectData = SubjectModel;
 

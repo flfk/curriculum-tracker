@@ -2,22 +2,20 @@ import React, { Component } from 'react';
 import '../styles/App.css';
 
 import Subject from './Subject';
+import Topic from './Topic';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      subjectIDs: ['0', '1'],
+      subjectIDs: ['0', '1', '2'],
     };
   }
 
   render() {
-    const subjects = this.state.subjectIDs
-      .map(elem => <Subject key={elem} subjectID={elem} />);
-
     return (
       <div className="App">
-        <div>{ subjects }</div>
+        <Topic key="0" subjectIDs={ this.state.subjectIDs } />
       </div>
     );
   }
