@@ -4,13 +4,8 @@ import SubjectTag from './SubjectTag';
 
 import '../styles/subject.css';
 
-import SubjectModel from '../model/SubjectModel.json';
-
-const subjectData = SubjectModel;
-
 const Subject = (props) => {
-  const { subjectID } = props;
-  const subject = subjectData[subjectID];
+  const { subject } = props;
 
   const {
     type, duration, author, link,
@@ -34,10 +29,10 @@ const Subject = (props) => {
 };
 
 Subject.propTypes = {
-  subjectID: PropTypes.string,
+  subject: PropTypes.object,
 };
 Subject.defaultProps = {
-  subjectID: '',
+  subject: {},
 };
 
 export default Subject;
