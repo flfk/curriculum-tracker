@@ -27,16 +27,12 @@
   left: 15px;
 }
 
-.topicEditBtn {
+.topicProgress {
   height: 20px;
-  width: 40px;
-  font-size: 14px;
-  color: #00000054;
-  /*remove inherited border from topic*/
-  border: initial;
+  width: 20px;
   position: absolute;
   top: 20px;
-  right: 15px;
+  right: 60px;
 }
 
 .topicDivider {
@@ -45,5 +41,17 @@
   background-color: #CCCCCC;
   position: absolute;
   top: 20px;
-  right: 60px;
+  right: 48px;
+}
+
+.topicEditBtn {
+  height: 20px;
+  width: 30px;
+  font-size: 14px;
+  color: #00000054;
+  /*remove inherited border from topic*/
+  border: initial;
+  position: absolute;
+  top: 20px;
+  right: 15px;
 }

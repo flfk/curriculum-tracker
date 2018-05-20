@@ -4,6 +4,8 @@ import Subject from './Subject';
 
 import '../styles/topic.css';
 
+import iconProgressBar from '../icons/RoundProgress.png';
+
 const Topic = (props) => {
   const { topicName } = props;
   const { subjectIDs } = props;
@@ -15,7 +17,7 @@ const Topic = (props) => {
     <div className="topic">
       <div className="topicHeader">
         <div className="topicName">{ topicName }</div>
-        <div className="topicProgress"></div>
+        <img className="topicProgress" src={iconProgressBar} alt="Progress Bar" />
         <div className="topicDivider" />
         <button className="topicEditBtn">Edit</button>
       </div>
