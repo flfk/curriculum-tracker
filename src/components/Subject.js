@@ -4,6 +4,15 @@ import SubjectTag from './SubjectTag';
 
 import '../styles/subject.css';
 
+import iconTick from '../icons/Tick.png';
+
+const NOT_COMPLETED_TICK_CLASS = 'tickBtn';
+const NOT_COMPLETED_SUBJECT_LINK_CLASS = 'subjectLink';
+const NOT_COMPLETED_TAGS_CLASS = 'subjectTagsDiv';
+const COMPLETED_TICK_CLASS = 'tickBtn tickBtnCompleted';
+const COMPLETED_SUBJECT_LINK_CLASS = 'subjectLink subjectLinkCompleted';
+const COMPLETED_TAGS_CLASS = 'subjectTagsDiv subjectTagsDivCompleted';
+
 const Subject = (props) => {
   const { subject } = props;
 
@@ -15,11 +24,34 @@ const Subject = (props) => {
   const durationTag = <SubjectTag key={duration} tagName="duration" tagValue={duration} />;
   const authorTag = <SubjectTag key={author} tagName="author" tagValue={author} />;
 
+  let tickClass = NOT_COMPLETED_TICK_CLASS;
+  let subjectLinkClass = NOT_COMPLETED_SUBJECT_LINK_CLASS;
+  let TagDivClass = NOT_COMPLETED_TAGS_CLASS;
+
+  let tickBtn = (
+    <div>
+      <button className={tickClass} />
+    </div>
+  );
+
+  if (subject.isComplete) {
+    tickClass = COMPLETED_TICK_CLASS;
+    subjectLinkClass = COMPLETED_SUBJECT_LINK_CLASS;
+    TagDivClass = COMPLETED_TAGS_CLASS;
+
+    tickBtn = (
+      <div>
+        <button className={tickClass} />
+        <img src={iconTick} alt="Tick" className="tick" />
+      </div>
+    );
+  }
+
   return (
     <div className="subject">
-      <button className="tickBtn" />
-      <a className="subjectLink" href={link}>{ subject.name}</a>
-      <div className="subjectTagsDiv">
+      {tickBtn}
+      <a className={subjectLinkClass} href={link}>{ subject.name}</a>
+      <div className={TagDivClass}>
         <div className="subjectTag">{ typeTag }</div>
         <div className="subjectTag">{ durationTag }</div>
         <div className="subjectTag">{ authorTag }</div>

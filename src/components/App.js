@@ -8,10 +8,6 @@ import SubjectModel from '../model/SubjectModel.json';
 class App extends Component {
   constructor() {
     super();
-    // this.state = {
-    //   subjectIDs: ['0', '1', '2'],
-    //   subjectModel: SubjectModel,
-    // };
     this.state = {
       subjectIDs: ['0', '1', '2'],
       topic0: {
@@ -25,7 +21,7 @@ class App extends Component {
             duration: '180',
             author: 'Harvard',
             link: 'https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x#!',
-            isComplete: 'false',
+            isComplete: false,
           },
           '1': {
             name: 'Introduction to Computer Science and Programming',
@@ -33,7 +29,7 @@ class App extends Component {
             duration: '135',
             author: 'MIT',
             link: 'https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-11',
-            isComplete: 'false',
+            isComplete: true,
           },
           '2': {
             name: 'Test me for broken elements',
@@ -41,7 +37,7 @@ class App extends Component {
             duration: '',
             author: 'MIT',
             link: '',
-            isComplete: 'false',
+            isComplete: false,
           },
           subjectID: {
             name: '',
@@ -49,7 +45,7 @@ class App extends Component {
             duration: '',
             author: '',
             link: '',
-            isComplete: 'false',
+            isComplete: false,
           },
         },
       },
@@ -59,7 +55,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Topic key="0" subjectIDs={ this.state.subjectIDs } topic={this.state.topic0} />
+        <Topic key="0" topic={this.state.topic0} />
       </div>
     );
   }
