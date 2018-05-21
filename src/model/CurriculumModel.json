@@ -1,10 +1,12 @@
 {
   "curriculumID": "999",
-  "name": "OSSU - Computer Science Curriculum v7 -  Core CS",
-  "link": "",
-  "subjectsTotal": 4,
-  "subjectsCompleted": 2,
-  "ExpectedGraduation": "1 Jan 2016",
+  "header": {
+    "name": "OSSU - ...",
+    "link": "https://github.com/ossu/computer-science",
+    "subjectsTotal": 4,
+    "subjectsCompleted": 2,
+    "expectedGraduation": "1 Jan 2016"
+  },
   "topics": [
     {
       "topicID": "topic0",

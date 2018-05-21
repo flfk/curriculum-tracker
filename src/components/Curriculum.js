@@ -3,7 +3,7 @@ import CurriculumHeader from './CurriculumHeader';
 import Topic from './Topic';
 import {
   // At Curriculum Level
-  CURRICULUM_ID_KEY,
+  CURRICULUM_ID_KEY, HEADER_KEY,
   // At Topic Level
   TOPICS_KEY, SUBJECTS_COMPLETED_KEY,
   // At Subjects Level
@@ -12,16 +12,20 @@ import {
 
 import CurriculumModel from '../model/CurriculumModel.json';
 
+import '../styles/curriculum.css';
+
 class Curriculum extends Component {
   constructor() {
     super();
     this.state = {
       'curriculumID': '',
-      'name': 'OSSU - Computer Science Curriculum v7 -  Core CS',
-      'link': '',
-      'subjectsTotal': 4,
-      'subjectsCompleted': 2,
-      'ExpectedGraduation': '1 Jan 2016',
+      'header': {
+        'name': '',
+        'link': '',
+        'subjectsTotal': 0,
+        'subjectsCompleted': 0,
+        'expectedGraduation': '',
+      },
       'topics': [
         {
           topicID: '',
@@ -44,6 +48,7 @@ class Curriculum extends Component {
     };
   }
 
+  // Load curriculum model test data
   componentDidMount() {
     this.setState(CurriculumModel)
   }
@@ -65,6 +70,7 @@ class Curriculum extends Component {
       updatedTopic[SUBJECTS_COMPLETED_KEY] -= 1;
     }
 
+    // Update state
     const updatedCurriculum = this.state;
     updatedCurriculum[TOPICS_KEY][topicIndex] = updatedTopic;
     this.setState(updatedCurriculum);
@@ -75,6 +81,7 @@ class Curriculum extends Component {
       <CurriculumHeader
       key={this.state[CURRICULUM_ID_KEY]}
       curriculumID={this.state[CURRICULUM_ID_KEY]}
+      headerInfo={this.state[HEADER_KEY]}
       />
       );
 
@@ -91,7 +98,7 @@ class Curriculum extends Component {
       );
 
     return (
-      <div>
+      <div className="curriculum">
         {curriculumHeader}
         {topics}
       </div>

@@ -1,4 +1,5 @@
 .topic {
+  background-color: white;
   border: 1px solid #979797;
   border-radius: 12px;
   box-shadow: 0px 1px 5px #D0D0D0;
@@ -17,7 +18,7 @@
   width: 190px;
   font-size: 18px;
   font-weight: bold;
-  color: #00000080;
+  color: #333333;
   /* Limit subject name within container*/
   white-space: nowrap;
   overflow: hidden;

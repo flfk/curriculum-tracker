@@ -15,7 +15,15 @@ const Topic = (props) => {
 
   const progress = (subjectsCompleted / subjectsTotal) * 100;
 
-  const progressBar = <Circle className="topicProgress" percent={progress} strokeWidth="15" trailWidth="15" strokeColor="#DD4C4F" />;
+  const progressBar = (
+    <Circle
+      className="topicProgress"
+      percent={progress}
+      strokeWidth="15"
+      trailWidth="15"
+      strokeColor="#DD4C4F"
+    />
+    );
 
   const subjectDivs = topic.subjects
     .map((subject, index) => (
