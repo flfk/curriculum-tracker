@@ -55,3 +55,7 @@
   top: 20px;
   right: 15px;
 }
+
+.topicEditBtn:hover {
+  color: #00000080;
+}
