@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SubjectTag from './SubjectTag';
+import {
+  NOT_COMPLETED_TICK_CLASS, COMPLETED_TICK_CLASS,
+  NOT_COMPLETED_SUBJECT_LINK_CLASS, COMPLETED_SUBJECT_LINK_CLASS,
+  NOT_COMPLETED_TAGS_CLASS, COMPLETED_TAGS_CLASS,
+} from '../constants/cssClasses';
 
 import '../styles/subject.css';
 
 import iconTick from '../icons/Tick.png';
 
-const NOT_COMPLETED_TICK_CLASS = 'tickBtn';
-const NOT_COMPLETED_SUBJECT_LINK_CLASS = 'subjectLink';
-const NOT_COMPLETED_TAGS_CLASS = 'subjectTagsDiv';
-const COMPLETED_TICK_CLASS = 'tickBtn tickBtnCompleted';
-const COMPLETED_SUBJECT_LINK_CLASS = 'subjectLink subjectLinkCompleted';
-const COMPLETED_TAGS_CLASS = 'subjectTagsDiv subjectTagsDivCompleted';
 
 const Subject = (props) => {
   const {

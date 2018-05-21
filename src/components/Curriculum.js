@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import CurriculumHeader from './CurriculumHeader'
+import CurriculumHeader from './CurriculumHeader';
 import Topic from './Topic';
+import {
+  // At Curriculum Level
+  CURRICULUM_ID_KEY,
+  // At Topic Level
+  TOPICS_KEY, SUBJECTS_COMPLETED_KEY,
+  // At Subjects Level
+  SUBJECTS_KEY, IS_COMPLETE_KEY
+} from '../constants/dataModelKeys';
 
-import CurriculumModel from '../model/CurriculumModel.json'
-
-const CURRICULUM_ID_KEY = 'curriculumID'
-const TOPICS_KEY = 'topics'
-const SUBJECTS_COMPLETED_KEY = 'subjectsCompleted'
-const SUBJECTS_KEY = 'subjects'
-const IS_COMPLETE_KEY = 'isComplete'
+import CurriculumModel from '../model/CurriculumModel.json';
 
 class Curriculum extends Component {
   constructor() {
