@@ -8,11 +8,14 @@
 
 .curriculumHeaderLHS {
   height:40px;
-  position: absolute;
+  width: 290px;
+  /*position: absolute;
   top: 0px;
-  left: 0px;
+  left: 0px;*/
   display: flex;
   align-items: center;
+
+  border: 1px solid red;
 }
 
 .curriculumTitle {
