@@ -5,6 +5,7 @@ import '../styles/App.css';
 
 const SUBJECTS_KEY = 'subjects'
 const IS_COMPLETE_KEY = 'isComplete'
+const SUBJECTS_COMPLETED_KEY = 'subjectsCompleted'
 
 class App extends Component {
   constructor() {
@@ -12,8 +13,8 @@ class App extends Component {
     this.state = {
       topic0: {
         name: 'Introduction to CS',
-        subjectsTotal: 4,
-        subjectsCompleted: 0,
+        subjectsTotal: 2,
+        subjectsCompleted: 1,
         subjects: {
           '0': {
             name: 'HarvardCS50',
@@ -60,13 +61,22 @@ class App extends Component {
   }
 
   onTickBtn = (topicID, subjectID) => {
+    // update isCompleted bool in subject
     const topicCopy = Object.assign({}, this.state[topicID]);
-    const isCompleteBool = topicCopy[SUBJECTS_KEY][subjectID][IS_COMPLETE_KEY]
     topicCopy[SUBJECTS_KEY][subjectID][IS_COMPLETE_KEY] = !topicCopy[SUBJECTS_KEY][subjectID][IS_COMPLETE_KEY];
-    this.setState({ [topicID]: topicCopy })
+
+    // update subjectsCompleted integer in Topic
+    const isComplete = topicCopy[SUBJECTS_KEY][subjectID][IS_COMPLETE_KEY];
+    if (isComplete) {
+      topicCopy[SUBJECTS_COMPLETED_KEY] += 1;
+    }
+    else {
+      topicCopy[SUBJECTS_COMPLETED_KEY] -= 1;
+    }
+
+    this.setState({ [topicID]: topicCopy });
   }
 
-// <Topic key="0" topicID = {'topic0'} topic={this.state.topic0} onTickBtn={this.onTickBtn}/>
   render() {
 
     const topics = Object.keys(this.state)
