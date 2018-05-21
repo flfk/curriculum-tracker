@@ -9,8 +9,9 @@ import iconProgressBar from '../icons/RoundProgress.png';
 const Topic = (props) => {
   const { topicID, topic, onTickBtn } = props;
 
-  const { name } = topic;
-  const { subjects } = topic;
+  const {
+    name, subjects, subjectsTotal, subjectsCompleted,
+  } = topic;
 
   const subjectDivs = Object.keys(subjects)
     .map(subjectID => <Subject key={subjectID} topicID = {topicID} subjectID={subjectID} subject={subjects[subjectID]} onTickBtn={onTickBtn} />);
@@ -19,6 +20,7 @@ const Topic = (props) => {
     <div className="topic">
       <div className="topicHeader">
         <div className="topicName">{name}</div>
+        {subjectsCompleted} / {subjectsTotal}
         <img className="topicProgress" src={iconProgressBar} alt="Progress Bar" />
         <div className="topicDivider" />
         <button className="topicEditBtn">Edit</button>
