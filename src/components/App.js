@@ -3,12 +3,13 @@ import Topic from './Topic';
 
 import '../styles/App.css';
 
+const SUBJECTS_KEY = 'subjects'
+const IS_COMPLETE_KEY = 'isComplete'
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      testNumber: 0,
-      subjectIDs: ['0', '1', '2'],
       topic0: {
         name: 'Introduction to CS',
         subjectsTotal: 4,
@@ -51,20 +52,17 @@ class App extends Component {
     };
   }
 
-  onTickBtn = (e, subject) => {
-    const topic0Copy = Object.assign({}, this.state.topic0);
-    topic0Copy['subjects']['0']['isComplete'] = !topic0Copy['subjects']['0']['isComplete'];
-    // console.log(topic0Copy);
-    // console.log(topic0Copy['subjects']['0']['isComplete']);
-    this.setState({ topic: topic0Copy })
-    console.log('Ive been clicked');
-    console.log(e.target.className)
+  onTickBtn = (topicID, subjectID) => {
+    const topicCopy = Object.assign({}, this.state[topicID]);
+    const isCompleteBool = topicCopy[SUBJECTS_KEY][subjectID][IS_COMPLETE_KEY]
+    topicCopy[SUBJECTS_KEY][subjectID][IS_COMPLETE_KEY] = !topicCopy[SUBJECTS_KEY][subjectID][IS_COMPLETE_KEY];
+    this.setState({ topicID: topicCopy })
   }
 
   render() {
     return (
       <div className="App">
-        <Topic key="0" topic={this.state.topic0} onTickBtn={this.onTickBtn}/>
+        <Topic key="0" topicID = {'topic0'} topic={this.state.topic0} onTickBtn={this.onTickBtn}/>
       </div>
     );
   }
