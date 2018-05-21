@@ -43,14 +43,12 @@ const Topic = (props) => {
 };
 
 Topic.propTypes = {
-  subject: PropTypes.shape({
-    subjectID: PropTypes.number,
+  topic: PropTypes.shape({
+    topicID: PropTypes.string,
     name: PropTypes.string,
-    type: PropTypes.string,
-    duration: PropTypes.number,
-    author: PropTypes.string,
-    link: PropTypes.string,
-    isComplete: PropTypes.bool,
+    subjectsTotal: PropTypes.number,
+    subjectsCompleted: PropTypes.number,
+    subjects: PropTypes.array,
   }),
   topicIndex: PropTypes.number,
   onTickBtn: PropTypes.func,

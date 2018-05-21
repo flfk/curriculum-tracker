@@ -1,18 +1,25 @@
 import React, { Component } from 'react';
+import CurriculumHeader from './CurriculumHeader'
 import Topic from './Topic';
 
 import CurriculumModel from '../model/CurriculumModel.json'
 
+const CURRICULUM_ID_KEY = 'curriculumID'
 const TOPICS_KEY = 'topics'
+const SUBJECTS_COMPLETED_KEY = 'subjectsCompleted'
 const SUBJECTS_KEY = 'subjects'
 const IS_COMPLETE_KEY = 'isComplete'
-const SUBJECTS_COMPLETED_KEY = 'subjectsCompleted'
 
 class Curriculum extends Component {
   constructor() {
     super();
     this.state = {
       'curriculumID': '',
+      'name': 'OSSU - Computer Science Curriculum v7 -  Core CS',
+      'link': '',
+      'subjectsTotal': 4,
+      'subjectsCompleted': 2,
+      'ExpectedGraduation': '1 Jan 2016',
       'topics': [
         {
           topicID: '',
@@ -62,6 +69,14 @@ class Curriculum extends Component {
   }
 
   render() {
+    const curriculumHeader = (
+      <CurriculumHeader
+      key={this.state[CURRICULUM_ID_KEY]}
+      curriculumID={this.state[CURRICULUM_ID_KEY]}
+      />
+      );
+
+
     const topics = this.state[TOPICS_KEY]
       .map((topic, index) => (
         <Topic
@@ -75,6 +90,7 @@ class Curriculum extends Component {
 
     return (
       <div>
+        {curriculumHeader}
         {topics}
       </div>
     );

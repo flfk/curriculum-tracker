@@ -14,7 +14,9 @@ const COMPLETED_SUBJECT_LINK_CLASS = 'subjectLink subjectLinkCompleted';
 const COMPLETED_TAGS_CLASS = 'subjectTagsDiv subjectTagsDivCompleted';
 
 const Subject = (props) => {
-  const { topicIndex, subjectIndex, subject, onTickBtn } = props;
+  const {
+    topicIndex, subjectIndex, subject, onTickBtn,
+  } = props;
 
   const {
     type, duration, author, link,
