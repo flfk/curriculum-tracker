@@ -31,6 +31,13 @@ class App extends Component {
             link: 'https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-11',
             isComplete: true,
           },
+        },
+      },
+      topic1: {
+        name: 'Second Topic',
+        subjectsTotal: 2,
+        subjectsCompleted: 0,
+        subjects: {
           '2': {
             name: 'Test me for broken elements',
             type: 'Online Course',
@@ -56,13 +63,19 @@ class App extends Component {
     const topicCopy = Object.assign({}, this.state[topicID]);
     const isCompleteBool = topicCopy[SUBJECTS_KEY][subjectID][IS_COMPLETE_KEY]
     topicCopy[SUBJECTS_KEY][subjectID][IS_COMPLETE_KEY] = !topicCopy[SUBJECTS_KEY][subjectID][IS_COMPLETE_KEY];
-    this.setState({ topicID: topicCopy })
+    this.setState({ [topicID]: topicCopy })
   }
 
+// <Topic key="0" topicID = {'topic0'} topic={this.state.topic0} onTickBtn={this.onTickBtn}/>
   render() {
+
+    const topics = Object.keys(this.state)
+      .map(topicID => <Topic key={topicID} topicID = {topicID} topic={this.state[topicID]} onTickBtn={this.onTickBtn}/>);
+
     return (
       <div className="App">
-        <Topic key="0" topicID = {'topic0'} topic={this.state.topic0} onTickBtn={this.onTickBtn}/>
+
+        {topics}
       </div>
     );
   }
