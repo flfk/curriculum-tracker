@@ -12,52 +12,16 @@ class Curriculum extends Component {
   constructor() {
     super();
     this.state = {
-      'testState' : {},
-      'curriculumID': '999',
+      'curriculumID': '',
       'topics': [
         {
-          topicID: 'topic0',
-          name: 'Introduction to CS',
-          subjectsTotal: 2,
-          subjectsCompleted: 1,
-          subjects: [
-            {
-              subjectID: '0',
-              name: 'HarvardCS50',
-              type: 'Online Course',
-              duration: '180',
-              author: 'Harvard',
-              link: 'https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x#!',
-              isComplete: false,
-            },
-            {
-              subjectID: '1',
-              name: 'Introduction to Computer Science and Programming',
-              type: 'Online Course',
-              duration: '135',
-              author: 'MIT',
-              link: 'https://www.edx.org/course/introduction-computer-science-mitx-6-00-1x-11',
-              isComplete: true,
-            },
-          ],
-        },
-        {
-          topicID: 'topic1',
-          name: 'Second Topic',
-          subjectsTotal: 2,
+          topicID: '',
+          name: '',
+          subjectsTotal: 0,
           subjectsCompleted: 0,
           subjects: [
             {
-              subjectID: '2',
-              name: 'Test me for broken elements',
-              type: 'Online Course',
-              duration: '',
-              author: 'MIT',
-              link: '',
-              isComplete: false,
-            },
-            {
-              subjectID: '3',
+              subjectID: '0',
               name: '',
               type: '',
               duration: '',
@@ -72,7 +36,7 @@ class Curriculum extends Component {
   }
 
   componentDidMount() {
-    this.setState({testState: CurriculumModel})
+    this.setState(CurriculumModel)
   }
 
   onTickBtn = (topicIndex, subjectIndex) => {
@@ -98,9 +62,6 @@ class Curriculum extends Component {
   }
 
   render() {
-
-    console.log(this.state.testState)
-
     const topics = this.state[TOPICS_KEY]
       .map((topic, index) => (
         <Topic
