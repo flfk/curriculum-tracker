@@ -23,6 +23,8 @@
 
 .tickBtnCompleted {
   border-color: #DD4C4F;
+  background-color: transparent;
+  /*opacity: 0;*/
 }
 
 .tick {

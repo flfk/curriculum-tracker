@@ -28,27 +28,16 @@ const Subject = (props) => {
   let subjectLinkClass = NOT_COMPLETED_SUBJECT_LINK_CLASS;
   let TagDivClass = NOT_COMPLETED_TAGS_CLASS;
 
-  let tickBtn = <button className={tickClass} onClick={onTickBtn} />;
-
-  let tickDiv = <div> {tickBtn} </div>;
-
   if (subject.isComplete) {
     tickClass = COMPLETED_TICK_CLASS;
     subjectLinkClass = COMPLETED_SUBJECT_LINK_CLASS;
     TagDivClass = COMPLETED_TAGS_CLASS;
-
-    tickDiv = (
-      <div>
-        { tickBtn }
-        <img src={iconTick} alt="Tick" className="tick" />
-      </div>
-    );
   }
 
   return (
     <div className="subject">
-      <div className="tickBtn" />
-      {tickDiv}
+      <img src={iconTick} alt="Tick" className="tick" />
+      <button className={tickClass} onClick={onTickBtn} />
       <a className={subjectLinkClass} href={link}>{ subject.name}</a>
       <div className={TagDivClass}>
         <div className="subjectTag">{ typeTag }</div>
