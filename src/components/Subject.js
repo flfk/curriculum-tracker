@@ -14,7 +14,7 @@ const COMPLETED_SUBJECT_LINK_CLASS = 'subjectLink subjectLinkCompleted';
 const COMPLETED_TAGS_CLASS = 'subjectTagsDiv subjectTagsDivCompleted';
 
 const Subject = (props) => {
-  const { subject } = props;
+  const { subject, onTickBtn } = props;
 
   const {
     type, duration, author, link,
@@ -28,20 +28,18 @@ const Subject = (props) => {
   let subjectLinkClass = NOT_COMPLETED_SUBJECT_LINK_CLASS;
   let TagDivClass = NOT_COMPLETED_TAGS_CLASS;
 
-  let tickBtn = (
-    <div>
-      <button className={tickClass} />
-    </div>
-  );
+  let tickBtn = <button className={tickClass} onClick={onTickBtn} />;
+
+  let tickDiv = <div> {tickBtn} </div>;
 
   if (subject.isComplete) {
     tickClass = COMPLETED_TICK_CLASS;
     subjectLinkClass = COMPLETED_SUBJECT_LINK_CLASS;
     TagDivClass = COMPLETED_TAGS_CLASS;
 
-    tickBtn = (
+    tickDiv = (
       <div>
-        <button className={tickClass} />
+        { tickBtn }
         <img src={iconTick} alt="Tick" className="tick" />
       </div>
     );
@@ -49,7 +47,8 @@ const Subject = (props) => {
 
   return (
     <div className="subject">
-      {tickBtn}
+      <div className="tickBtn" />
+      {tickDiv}
       <a className={subjectLinkClass} href={link}>{ subject.name}</a>
       <div className={TagDivClass}>
         <div className="subjectTag">{ typeTag }</div>

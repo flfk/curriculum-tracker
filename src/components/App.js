@@ -51,20 +51,20 @@ class App extends Component {
     };
   }
 
-  onTickBtn = () => {
+  onTickBtn = (e, subject) => {
     const topic0Copy = Object.assign({}, this.state.topic0);
     topic0Copy['subjects']['0']['isComplete'] = !topic0Copy['subjects']['0']['isComplete'];
     // console.log(topic0Copy);
     // console.log(topic0Copy['subjects']['0']['isComplete']);
     this.setState({ topic: topic0Copy })
+    console.log('Ive been clicked');
+    console.log(e.target.className)
   }
 
   render() {
     return (
       <div className="App">
-        <button onClick={this.onTickBtn}>Complete HarvardCS50</button>
-        <div>{this.state.testNumber}</div>
-        <Topic key="0" topic={this.state.topic0} />
+        <Topic key="0" topic={this.state.topic0} onTickBtn={this.onTickBtn}/>
       </div>
     );
   }

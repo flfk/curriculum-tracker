@@ -7,13 +7,13 @@ import '../styles/topic.css';
 import iconProgressBar from '../icons/RoundProgress.png';
 
 const Topic = (props) => {
-  const { topic } = props;
+  const { topic, onTickBtn } = props;
 
   const { name } = topic;
   const { subjects } = topic;
 
   const subjectDivs = Object.keys(subjects)
-    .map(subjectID => <Subject key={subjectID} subject={subjects[subjectID]} />);
+    .map(subjectID => <Subject key={subjectID} subject={subjects[subjectID]} onTickBtn={onTickBtn} />);
 
   return (
     <div className="topic">
