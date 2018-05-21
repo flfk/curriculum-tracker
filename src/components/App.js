@@ -3,12 +3,11 @@ import Topic from './Topic';
 
 import '../styles/App.css';
 
-import SubjectModel from '../model/SubjectModel.json';
-
 class App extends Component {
   constructor() {
     super();
     this.state = {
+      testNumber: 0,
       subjectIDs: ['0', '1', '2'],
       topic0: {
         name: 'Introduction to CS',
@@ -52,9 +51,19 @@ class App extends Component {
     };
   }
 
+  onTickBtn = () => {
+    const topic0Copy = Object.assign({}, this.state.topic0);
+    topic0Copy['subjects']['0']['isComplete'] = !topic0Copy['subjects']['0']['isComplete'];
+    // console.log(topic0Copy);
+    // console.log(topic0Copy['subjects']['0']['isComplete']);
+    this.setState({ topic: topic0Copy })
+  }
+
   render() {
     return (
       <div className="App">
+        <button onClick={this.onTickBtn}>Complete HarvardCS50</button>
+        <div>{this.state.testNumber}</div>
         <Topic key="0" topic={this.state.topic0} />
       </div>
     );
