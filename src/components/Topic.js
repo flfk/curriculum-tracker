@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// https://github.com/react-component/progress <--- circular progress bar
+import { Circle } from 'rc-progress';
 import Subject from './Subject';
 
 import '../styles/topic.css';
-
-import iconProgressBar from '../icons/RoundProgress.png';
 
 const Topic = (props) => {
   const { topicID, topic, onTickBtn } = props;
@@ -13,15 +13,18 @@ const Topic = (props) => {
     name, subjects, subjectsTotal, subjectsCompleted,
   } = topic;
 
+  const progress = (subjectsCompleted / subjectsTotal) * 100;
+
+  const progressBar = <Circle className="topicProgress" percent={progress} strokeWidth="15" trailWidth="15" strokeColor="#DD4C4F" />;
+
   const subjectDivs = Object.keys(subjects)
-    .map(subjectID => <Subject key={subjectID} topicID = {topicID} subjectID={subjectID} subject={subjects[subjectID]} onTickBtn={onTickBtn} />);
+    .map(subjectID => <Subject key={subjectID} topicID={topicID} subjectID={subjectID} subject={subjects[subjectID]} onTickBtn={onTickBtn} />);
 
   return (
     <div className="topic">
       <div className="topicHeader">
         <div className="topicName">{name}</div>
-        {subjectsCompleted} / {subjectsTotal}
-        <img className="topicProgress" src={iconProgressBar} alt="Progress Bar" />
+        {progressBar}
         <div className="topicDivider" />
         <button className="topicEditBtn">Edit</button>
       </div>
