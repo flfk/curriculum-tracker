@@ -7,10 +7,10 @@ import Subject from './Subject';
 import '../styles/topic.css';
 
 const Topic = (props) => {
-  const { topicID, topic, onTickBtn } = props;
+  const { topic, topicIndex, onTickBtn } = props;
 
   const {
-    name, subjects, subjectsTotal, subjectsCompleted,
+    name, subjectsTotal, subjectsCompleted,
   } = topic;
 
   const progress = (subjectsCompleted / subjectsTotal) * 100;
@@ -18,11 +18,11 @@ const Topic = (props) => {
   const progressBar = <Circle className="topicProgress" percent={progress} strokeWidth="15" trailWidth="15" strokeColor="#DD4C4F" />;
 
   const subjectDivs = topic.subjects
-    .map(subject => (
+    .map((subject, index) => (
       <Subject
         key={subject.subjectID}
-        topicID={topicID}
-        subjectID={subject.subjectID}
+        topicIndex={topicIndex}
+        subjectIndex={index}
         subject={subject}
         onTickBtn={onTickBtn}
       />
@@ -43,10 +43,21 @@ const Topic = (props) => {
 };
 
 Topic.propTypes = {
-  topic: PropTypes.object,
+  subject: PropTypes.shape({
+    subjectID: PropTypes.number,
+    name: PropTypes.string,
+    type: PropTypes.string,
+    duration: PropTypes.number,
+    author: PropTypes.string,
+    link: PropTypes.string,
+    isComplete: PropTypes.bool,
+  }),
+  topicIndex: PropTypes.number,
+  onTickBtn: PropTypes.func,
 };
 Topic.defaultProps = {
   topic: {},
+  topicIndex: 0,
 };
 
 export default Topic;
