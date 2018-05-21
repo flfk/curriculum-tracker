@@ -17,8 +17,17 @@ const Topic = (props) => {
 
   const progressBar = <Circle className="topicProgress" percent={progress} strokeWidth="15" trailWidth="15" strokeColor="#DD4C4F" />;
 
-  const subjectDivs = Object.keys(subjects)
-    .map(subjectID => <Subject key={subjectID} topicID={topicID} subjectID={subjectID} subject={subjects[subjectID]} onTickBtn={onTickBtn} />);
+  const subjectDivs = topic.subjects
+    .map(subject => (
+      <Subject
+        key={subject.subjectID}
+        topicID={topicID}
+        subjectID={subject.subjectID}
+        subject={subject}
+        onTickBtn={onTickBtn}
+      />
+    ));
+
 
   return (
     <div className="topic">
