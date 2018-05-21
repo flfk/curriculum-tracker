@@ -35,11 +35,11 @@ const CurriculumHeader = (props) => {
       </div>
       <div className="curriculumHeaderRHS">
         <div className="expectedGradDiv">
+          <img className="iconExpectedGrad" src={iconExpectedGrad} alt="Expected graduation icon" />
           <div className="expectedGradYear">2018</div>
           <div className="expectedGradMonth">Jun</div>
           <div className="expectedGradDay">28</div>
-          <img className="iconExpectedGrad" src={iconExpectedGrad} alt="Expected graduation icon" />
-          <div className="expectedGradLbl"> Projected Graduation</div>
+          <div className="expectedGradLbl">Projected Graduation</div>
         </div>
         <div className="curriculumProgressDiv">
           {curriculumProgressBar}
