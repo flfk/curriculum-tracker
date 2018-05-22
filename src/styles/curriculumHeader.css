@@ -3,45 +3,52 @@
 }
 
 .curriculumHeader {
-  position: relative;
-  /*overflow ensures that LHS isn't under topic*/
-  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 .curriculumHeaderLHS {
-  height:40px;
-  width: 290px;
-  display: inline-block;
-  /*vertical-align: top;*/
-  border: 1px solid red;
+  height: 40px;
+  flex: 0 0 290px;
+  display: flex;
+  align-items: center;
+
+  /*border: 1px solid red;*/
+}
+
+.curriculumHeaderRHS {
+  height: 40px;
+  flex: 0 0 290px;
+  position: relative;
+
+  /*border: 1px solid green;*/
+}
+
+@media only screen and (max-width: 585px) {
+    .curriculumHeader {
+        justify-content: center;
+    }
+
+    .curriculumHeaderLHS {
+      justify-content: center;
+    }
 }
 
 .curriculumTitle {
-  height: 40px;
   font-weight: bold;
   font-size: 24px;
   color: #333333;
-  display: inline-block;
-  border: 1px solid yellow;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
 }
 
 .curriculumLink {
   height: 23px;
   width: 23px;
-  /*display: flex;*/
-  /*margin: 0px 0px 0px 20px;*/
-}
-
-.curriculumHeaderRHS {
-  height:40px;
-  width: 290px;
-  display: inline-block;
-  position: relative;
-  float: right;
-
-  border: 1px solid green;
 }
 
 .expectedGradDiv {
