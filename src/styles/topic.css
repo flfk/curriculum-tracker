@@ -55,8 +55,13 @@
   position: absolute;
   top: 20px;
   right: 15px;
+  cursor: pointer;
 }
 
 .topicEditBtn:hover {
   color: #00000080;
+}
+
+.topicEditBtn:focus {
+  outline: 0;
 }

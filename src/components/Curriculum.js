@@ -54,7 +54,8 @@ class Curriculum extends Component {
   }
 
   onTickBtn = (topicIndex, subjectIndex) => {
-    const updatedTopic = this.state[TOPICS_KEY][topicIndex];
+    const updatedCurriculum = this.state;
+    const updatedTopic = updatedCurriculum[TOPICS_KEY][topicIndex];
     const updatedSubject = updatedTopic[SUBJECTS_KEY][subjectIndex];
     const updatedIsComplete = !updatedSubject[IS_COMPLETE_KEY];
 
@@ -64,14 +65,16 @@ class Curriculum extends Component {
 
     // Update subjectsCompleted integer in Topic
     if (updatedIsComplete) {
+      updatedCurriculum[HEADER_KEY][SUBJECTS_COMPLETED_KEY] += 1;
       updatedTopic[SUBJECTS_COMPLETED_KEY] += 1;
     }
     else {
+      updatedCurriculum[HEADER_KEY][SUBJECTS_COMPLETED_KEY] -= 1;
       updatedTopic[SUBJECTS_COMPLETED_KEY] -= 1;
     }
 
     // Update state
-    const updatedCurriculum = this.state;
+
     updatedCurriculum[TOPICS_KEY][topicIndex] = updatedTopic;
     this.setState(updatedCurriculum);
   }

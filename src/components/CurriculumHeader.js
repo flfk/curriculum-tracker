@@ -12,13 +12,17 @@ const CurriculumHeader = (props) => {
   const { curriculumID, headerInfo } = props;
 
   const {
-    name, link, totalSubjects, completed, expectedGraduation,
+    name, link, subjectsCompleted, subjectsTotal, expectedGraduation,
   } = headerInfo;
+
+  console.log(subjectsCompleted);
+
+  const progress = (subjectsCompleted / subjectsTotal) * 100;
 
   const curriculumProgressBar = (
     <Circle
       className="curriculumProgress"
-      percent="10"
+      percent={progress}
       strokeWidth="16"
       trailWidth="16"
       strokeColor="#DD4C4F"
@@ -43,13 +47,13 @@ const CurriculumHeader = (props) => {
         </div>
         <div className="curriculumProgressDiv">
           {curriculumProgressBar}
-          <div className="curriculumProgressLbl"> 2/29 </div>
+          <div className="curriculumProgressLbl"> {subjectsCompleted} / {subjectsTotal} </div>
         </div>
         <div className="headerDivider" />
         <div className="addTopicDiv">
           <img className="addTopicIcon" src={iconAddTopic} alt="Add topic icon" />
-          <button className="addTopicBtn"/>
           <div className="addTopicLbl">Add Topic</div>
+          <button className="addTopicBtn" />
         </div>
       </div>
     </div>

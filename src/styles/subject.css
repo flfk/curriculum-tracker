@@ -19,6 +19,11 @@
   left: 10px;
   border-color: #979797;
   border-radius: 5px;
+  cursor: pointer
+}
+
+.tickBtn:focus {
+  outline: 0;
 }
 
 .tickBtnCompleted {
