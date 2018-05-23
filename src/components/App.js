@@ -21,7 +21,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="curriculumContainer">
+        <div className="appContainer">
           {curriculum}
         </div>
 

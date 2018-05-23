@@ -103,7 +103,9 @@ class Curriculum extends Component {
     return (
       <div className="curriculum">
         {curriculumHeader}
-        {topics}
+        <div className="topicsContainer">
+          {topics}
+        </div>
       </div>
     );
   }

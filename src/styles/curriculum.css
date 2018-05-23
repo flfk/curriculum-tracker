@@ -3,10 +3,8 @@
   max-width: 1000px;
   margin: 0 auto;
   padding: 0px 20px;
-  /*background-color: yellow;*/
-  /*display: inline-block;*/
 
-  /*border: 1px solid red;*/
+  /*background-color: yellow;*/
 }
 
 @media only screen and (max-width: 320px) {
@@ -14,4 +12,19 @@
       margin: 0;
       padding: 0px;
     }
+}
+
+.topicsContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 320px);
+  grid-column-gap: 20px;
+  grid-auto-rows: minmax(110px, auto);
+  /*grid-row-gap: 20px;*/
+
+  background-color: pink;
+
+  /*display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;*/
 }

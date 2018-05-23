@@ -59,6 +59,58 @@
           "isComplete": false
         }
       ]
+    },
+    {
+      "topicID": "topic1",
+      "name": "Second Topic",
+      "subjectsTotal": 2,
+      "subjectsCompleted": 0,
+      "subjects": [
+        {
+          "subjectID": "2",
+          "name": "Test me for broken elements",
+          "type": "Online Course",
+          "duration": "",
+          "author": "MIT",
+          "link": "",
+          "isComplete": false
+        },
+        {
+          "subjectID": "3",
+          "name": "XXXXX",
+          "type": "",
+          "duration": "",
+          "author": "",
+          "link": "",
+          "isComplete": false
+        },
+        {
+          "subjectID": "3",
+          "name": "asdad",
+          "type": "",
+          "duration": "",
+          "author": "",
+          "link": "",
+          "isComplete": false
+        }
+      ]
+    },
+    {
+      "topicID": "topic1",
+      "name": "Second Topic",
+      "subjectsTotal": 2,
+      "subjectsCompleted": 0,
+      "subjects": [
+        {
+          "subjectID": "2",
+          "name": "Test me for broken elements",
+          "type": "Online Course",
+          "duration": "",
+          "author": "MIT",
+          "link": "",
+          "isComplete": false
+        }
+      ]
     }
   ]
 }
