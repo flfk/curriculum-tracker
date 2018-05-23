@@ -21,8 +21,10 @@ class App extends Component {
 
     return (
       <div className="App">
+        <div className="curriculumContainer">
+          {curriculum}
+        </div>
 
-        {curriculum}
       </div>
     );
   }

@@ -15,8 +15,6 @@ const CurriculumHeader = (props) => {
     name, link, subjectsCompleted, subjectsTotal, expectedGraduation,
   } = headerInfo;
 
-  console.log(subjectsCompleted);
-
   const progress = (subjectsCompleted / subjectsTotal) * 100;
 
   const curriculumProgressBar = (
