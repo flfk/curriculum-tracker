@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>BookmarkIconSelected</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Assets" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="BookmarkIconSelected" transform="translate(1.000000, 1.000000)">
+            <circle id="Oval" stroke="#D94A4D" cx="24" cy="24" r="24"></circle>
+            <path d="M15.6086957,11.4782609 L32.3913043,11.4782609 C32.9435891,11.4782609 33.3913043,11.9259761 33.3913043,12.4782609 L33.3913043,36.2815571 C33.3913043,36.5576995 33.1674467,36.7815571 32.8913043,36.7815571 C32.7683449,36.7815571 32.6496968,36.7362491 32.5580343,36.6542917 L24.6665401,29.5983362 C24.2869783,29.2589618 23.7130217,29.2589618 23.3334599,29.5983362 L15.4419657,36.6542917 C15.2361101,36.8383517 14.920021,36.8206828 14.7359611,36.6148272 C14.6540037,36.5231647 14.6086957,36.4045166 14.6086957,36.2815571 L14.6086957,12.4782609 C14.6086957,11.9259761 15.0564109,11.4782609 15.6086957,11.4782609 Z" id="BookmarkIcon" fill="#D94A4D"></path>
+        </g>
+    </g>
+</svg>

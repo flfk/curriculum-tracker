@@ -13,18 +13,3 @@
       padding: 0px;
     }
 }
-
-.topicsContainer {
-  display: grid;
-  grid-template-columns: repeat(3, 320px);
-  grid-column-gap: 20px;
-  grid-auto-rows: minmax(110px, auto);
-  /*grid-row-gap: 20px;*/
-
-  background-color: pink;
-
-  /*display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;*/
-}

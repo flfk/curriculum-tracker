@@ -13,8 +13,8 @@ import {
 import iconExternalLink from '../icons/ExternalLinkIcon.png';
 import iconExpectedGrad from '../icons/ExpectedGraduationIcon.png';
 
-import iconIsNotBookmarked from '../icons/BookmarkIconUnselected.png';
-import iconIsBookmarked from '../icons/BookmarkIconSelected.png';
+import iconIsNotBookmarked from '../icons/BookmarkIconUnselected.svg';
+import iconIsBookmarked from '../icons/BookmarkIconSelected.svg';
 
 // background: url(${props => props.isBookmarked? iconIsBookmarked : iconIsNotBookmarked});
 
@@ -121,7 +121,7 @@ const BookmarkBtn = styled.button`
   height: 48px;
   padding: 0;
   border: none;
-  backgroud-color: Transparent;
+  backgroud-color: transparent;
   cursor: pointer;
 `;
 

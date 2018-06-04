@@ -13,6 +13,7 @@ import {
 import CurriculumModel from '../model/CurriculumModel.json';
 
 import '../styles/curriculum.css';
+import styled from 'styled-components';
 
 class Curriculum extends Component {
   constructor() {
@@ -115,12 +116,17 @@ class Curriculum extends Component {
     return (
       <div className="curriculum">
         {curriculumHeader}
-        <div className="topicsContainer">
+        <TopicsContainer>
           {topics}
-        </div>
+        </TopicsContainer>
       </div>
     );
   }
 }
+
+const TopicsContainer = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+`;
 
 export default Curriculum;
