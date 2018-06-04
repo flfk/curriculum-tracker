@@ -1,11 +1,15 @@
 {
   "curriculumID": "999",
+  "isBookmarked": true,
   "header": {
     "name": "OSSU - Computer Science Curriculum v7 -  Core CS really really really long text",
+    "author": "Open Source University",
     "link": "https://github.com/ossu/computer-science",
     "subjectsTotal": 4,
     "subjectsCompleted": 1,
-    "expectedGraduation": "1 Jan 2016"
+    "expectedHours": "1225",
+    "updateDate": "1225",
+    "responsesTotal" : "127"
   },
   "topics": [
     {
@@ -61,8 +65,8 @@
       ]
     },
     {
-      "topicID": "topic1",
-      "name": "Second Topic",
+      "topicID": "topic2",
+      "name": "Third Topic",
       "subjectsTotal": 2,
       "subjectsCompleted": 0,
       "subjects": [
@@ -85,7 +89,7 @@
           "isComplete": false
         },
         {
-          "subjectID": "3",
+          "subjectID": "4",
           "name": "asdad",
           "type": "",
           "duration": "",
@@ -96,8 +100,8 @@
       ]
     },
     {
-      "topicID": "topic1",
-      "name": "Second Topic",
+      "topicID": "topic3",
+      "name": "Fourth Topic",
       "subjectsTotal": 2,
       "subjectsCompleted": 0,
       "subjects": [

@@ -3,7 +3,7 @@ import CurriculumHeader from './CurriculumHeader';
 import Topic from './Topic';
 import {
   // At Curriculum Level
-  CURRICULUM_ID_KEY, HEADER_KEY,
+  CURRICULUM_ID_KEY, IS_BOOKMARKED_KEY, HEADER_KEY,
   // At Topic Level
   TOPICS_KEY, SUBJECTS_COMPLETED_KEY,
   // At Subjects Level
@@ -19,12 +19,16 @@ class Curriculum extends Component {
     super();
     this.state = {
       'curriculumID': '',
+      'isBookmarked': false,
       'header': {
         'name': '',
+        'author': '',
         'link': '',
         'subjectsTotal': 0,
         'subjectsCompleted': 0,
-        'expectedGraduation': '',
+        'expectedHours': '',
+        'updateDate': '',
+        'responsesTotal': '',
       },
       'topics': [
         {
@@ -53,6 +57,12 @@ class Curriculum extends Component {
     this.setState(CurriculumModel)
   }
 
+  onBookmarkBtn = () => {
+    const updatedCurriculum = this.state;
+    updatedCurriculum[IS_BOOKMARKED_KEY] = !updatedCurriculum[IS_BOOKMARKED_KEY];
+    this.setState(updatedCurriculum);
+  };
+
   onTickBtn = (topicIndex, subjectIndex) => {
     const updatedCurriculum = this.state;
     const updatedTopic = updatedCurriculum[TOPICS_KEY][topicIndex];
@@ -77,14 +87,16 @@ class Curriculum extends Component {
 
     updatedCurriculum[TOPICS_KEY][topicIndex] = updatedTopic;
     this.setState(updatedCurriculum);
-  }
+  };
 
   render() {
     const curriculumHeader = (
       <CurriculumHeader
       key={this.state[CURRICULUM_ID_KEY]}
       curriculumID={this.state[CURRICULUM_ID_KEY]}
+      isBookmarked={this.state[IS_BOOKMARKED_KEY]}
       headerInfo={this.state[HEADER_KEY]}
+      onBookmarkBtn={this.onBookmarkBtn}
       />
       );
 

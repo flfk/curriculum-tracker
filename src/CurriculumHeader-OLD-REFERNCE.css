@@ -1,0 +1,212 @@
+*{
+  /*border: 1px solid red;*/
+}
+
+.curriculumHeader {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  /*background-color: orange;*/
+}
+
+.curriculumHeaderLHS {
+  height: 40px;
+  display: flex;
+  align-items: center;
+
+  max-width: calc(100vw - 290px - 60px);
+
+  /*background-color: green;*/
+}
+
+.curriculumHeaderRHS {
+  height: 40px;
+  flex: 0 0 290px;
+  position: relative;
+
+  /*background-color: red;*/
+}
+
+@media only screen and (min-width: 1000px) {
+    .curriculumHeaderLHS {
+      max-width: 670px;
+    }
+}
+
+@media only screen and (max-width: 585px) {
+    .curriculumHeader {
+        justify-content: center;
+    }
+
+    .curriculumHeaderLHS {
+      justify-content: center;
+      max-width: 290px;
+    }
+}
+
+.curriculumTitle {
+  font-weight: bold;
+  font-size: 24px;
+  color: #333333;
+  margin-right: 10px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  /*border: 1px solid yellow;*/
+}
+
+.curriculumLink {
+  height: 23px;
+  width: 23px;
+}
+
+.expectedGradDiv {
+  height: 40px;
+  width: 104px;
+  margin: 0px 0px 0px 10px;
+
+  /*border: 1px solid red;*/
+}
+
+.iconExpectedGrad {
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: 2px;
+}
+
+.expectedGradYear {
+  height: 10px;
+  width: 35px;
+  /*font-weight: bold;*/
+  font-size: 9px;
+  color: white;
+  position: absolute;
+  top: 3px;
+  text-align: center;
+}
+
+.expectedGradDay {
+  height: 15px;
+  width: 35px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #777777;
+  position: absolute;
+  top: 12px;
+  text-align: center;
+}
+
+.expectedGradMonth {
+  height: 10px;
+  width: 35px;
+  font-weight: bold;
+  font-size: 10px;
+  color: #777777;
+  position: absolute;
+  top: 25px;
+  text-align: center;
+}
+
+.expectedGradLbl {
+  font-size: 12px;
+  height: 30px;
+  width:64px;
+  color: #979797;
+  margin: 0px 0px 0px 5px;
+  position: absolute;
+  top: 5px;
+  left: 45px;
+}
+
+.curriculumProgressDiv {
+  height: 40px;
+  width: 70px;
+  position: absolute;
+  top: 0px;
+  right: 96px;
+}
+
+.curriculumProgress {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 5px;
+  left: 0px;
+}
+
+.curriculumProgressLbl {
+  height: 12px;
+  width: 30px;
+  font-size: 12px;
+  color: #979797;
+  position: absolute;
+  top: 12px;
+  right: 0px;
+}
+
+.headerDivider {
+  height: 30px;
+  width: 1px;
+  background-color: #CCCCCC;
+  position: absolute;
+  top: 5px;
+  right: 85px;
+}
+
+.addTopicDiv {
+  height: 40px;
+  width: 75px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  /*border: 1px solid red;*/
+}
+
+.addTopicIcon {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.addTopicIcon:hover {
+  background-color: #F0F0F0;
+}
+
+.addTopicBtn {
+  height: 40px;
+  width: 40px;
+  opacity: 0;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  cursor: pointer;
+
+  /*border: 1px solid red;*/
+}
+
+.addTopicBtn:hover {
+  background-color: #F0F0F0;
+  border: none;
+  opacity: 0.3;
+}
+
+.addTopicBtn:focus {
+  outline: 0;
+}
+
+.addTopicLbl {
+  height: 30px;
+  width: 30px;
+  font-size: 12px;
+  color: #979797;
+  position: absolute;
+  right: 0px;
+  top: 5px;
+}

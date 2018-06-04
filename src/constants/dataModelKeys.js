@@ -1,6 +1,7 @@
 // Keys used in Curriclum.js
 // At Curriculum Level
 export const CURRICULUM_ID_KEY = 'curriculumID';
+export const IS_BOOKMARKED_KEY = 'isBookmarked';
 export const HEADER_KEY = 'header';
 // At Topic Level
 export const TOPICS_KEY = 'topics';
