@@ -42,7 +42,7 @@ const Topic = (props) => {
       <div className="topicHeader">
         <div className="topicName">{name}</div>
         {progressBar}
-        <div className="topicDivider" />
+
         <button className="topicEditBtn">Edit</button>
       </div>
       <div>{ subjectDivs }</div>
